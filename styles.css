@@ -1,0 +1,160 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form label{
+    color: hsla(134, 68%, 26%, 100%);
+    font-style: bold; 
+}
+
+#form .styles-form {    
+    margin: 10px;
+    padding: 20px 30px;
+    font-size: 10px;
+
+}
+#form .text-box{
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-bottom: solid 2px transparent;
+    transition: border-bottom-color 1.2s, transform 1.2s;
+    transform-origin: left;
+}
+
+#form .text-box[type="number"]::-webkit-outer-spin-button,
+#form .text-box[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#form .text-box:hover,
+#form .text-box:focus{
+    border-bottom-color:#6e8e3d;
+    transform: scaleX(1);
+}
+
+#form .text-box::after {
+    content: '';
+    display: block;
+    border-bottom: solid 2px #6e8e3d;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left;
+}
+
+#form .text-box:hover::after,
+#form .text-box:focus::after {
+    transform: scaleX(1);
+}
+
+#form .styles-button { 
+    padding: 10px;
+    width: 100px;
+    height: 30px;
+    max-height: 35px; 
+}
+
+.icon-button {
+    display: inline-flex;
+    align-items: center; /* Centra el icono y el texto verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 10px 20px; /* Ajusta el espaciado dentro del botón */
+    font-size: 20px; /* Tamaño de la fuente del texto */
+    color: white;
+    background-color: hsla(134, 68%, 26%, 80%); /* Color de fondo del botón */
+    border: none;
+    border-radius: 4px; /* Bordes redondeados del botón */
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.6s ease;
+}
+
+.icon-button .material-icons {
+    margin-right: 8px; /* Espaciado entre el icono y el texto */
+    font-size: 20px; /* Tamaño del icono */
+}
+
+.icon-button span {
+    margin-left: 10px; /* Ajusta el espaciado entre el icono y el texto */
+}
+
+.icon-button:hover {
+    background-color: hsla(134, 68%, 26%, 100%); /* Color del botón en hover */
+    transform: rotate(10deg);
+}
+
+
+
+table {
+    width: 90%;
+    min-width: 600px;
+    border-collapse: separate;
+    position: relative;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Estilo para el encabezado */
+thead tr {
+    background-color: #6e8e3d;
+    color: white;
+}
+thead th:hover{
+    transform: scale(1.2);
+    border: none;
+}
+
+/* Estilo para las filas pares en el cuerpo de la tabla */
+tbody tr:nth-child(even) {
+    background-color: hsla(84, 40%, 40%, 50%); /* Color de fondo para filas pares en el cuerpo */
+}
+
+/* Estilo para las filas impares en el cuerpo de la tabla */
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Color de fondo para filas impares en el cuerpo */
+}
+
+/* Estilo para resaltar toda la fila cuando una celda está en hover */
+tbody tr:hover {
+    background-color: hsla(7, 68%, 26%, 0.2); /* Color de fondo para la fila resaltada */
+}
+
+tbody td:hover {
+    border-top: 2px solid #6e8e3d; /* Borde superior resaltado */
+    border-bottom: 2px solid #6e8e3d; /* Borde inferior resaltado */
+}
+
+tbody td:hover {
+    border-left: 2px solid #6e8e3d; /* Borde izquierdo resaltado */
+    border-right: 2px solid #6e8e3d; /* Borde derecho resaltado */
+}
+
+tbody tr:hover td {
+    border-color: #6e8e3d; /* Borde color de la fila resaltada */
+}
+
