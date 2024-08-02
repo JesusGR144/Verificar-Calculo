@@ -108,7 +108,7 @@ html, body {
 
 table {
     width: 90%;
-    min-width: 600px;
+    min-width: 350px;
     border-collapse: separate;
     position: relative;
 }
@@ -158,3 +158,13 @@ tbody tr:hover td {
     border-color: #6e8e3d; /* Borde color de la fila resaltada */
 }
 
+@media(width >= 300px) and (width <= 600px){
+    .container{
+        max-width: 90%;
+        padding: 10px;
+    }
+    table{
+        width: 80%;
+        font-size: 8px;
+    }
+}
