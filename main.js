@@ -12,8 +12,8 @@ function insertRow() {
     }
 
 
-    // Calcular el total (si es necesario)
-    const total = parseFloat(cantidad1) * parseFloat(cantidad2);
+    // Calcular el total y truncarlo
+    const total = Math.floor(parseFloat(cantidad1) * parseFloat(cantidad2));
     totalAdd += total;
     document.getElementById('add-total').textContent = `Total = $${totalAdd.toLocaleString()}` ;
 
