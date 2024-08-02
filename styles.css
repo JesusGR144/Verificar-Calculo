@@ -108,7 +108,7 @@ html, body {
 
 table {
     width: 90%;
-    min-width: 350px;
+    min-width: 600px;
     border-collapse: separate;
     position: relative;
 }
@@ -164,7 +164,8 @@ tbody tr:hover td {
         padding: 10px;
     }
     table{
-        width: 80%;
+        width: 90%;
+        min-width: 380px;
         font-size: 8px;
     }
 }
