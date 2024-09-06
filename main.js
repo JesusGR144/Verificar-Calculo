@@ -6,7 +6,7 @@ function insertRow() {
     const cantidad2 = document.getElementById('cantidad2').value;
 
     // Validar que los valores no estén vacíos
-    if (!cantidad1 && !cantidad2) {
+    if (!cantidad1 || !cantidad2) {
         alert('Por favor, ingrese valores en ambos campos.');
         return;
     }
@@ -29,7 +29,7 @@ function insertRow() {
 
     // Asignar valores a las celdas
     cellNo.textContent = tableBody.rows.length + 1; // Número de fila
-    cellCant1.textContent = `${cantidad1} ML` ;
+    cellCant1.textContent = `${cantidad1}` ;
     cellCant2.textContent = cantidad2;
     cellTotal.textContent = `$${total.toLocaleString()}`;
 
@@ -46,3 +46,27 @@ function insertRow() {
     document.getElementById('cantidad1').value = '';
     document.getElementById('cantidad2').value = '';
 }
+
+// // Escuchar el evento 'keydown' en los campos de entrada
+// document.getElementById('cantidad1').addEventListener('keydown', function(event) {
+//     if (event.key === 'Enter') {
+//         insertRow();
+//     }
+// });
+
+// document.getElementById('cantidad2').addEventListener('keydown', function(event) {
+//     if (event.key === 'Enter') {
+//         insertRow();
+//     }
+// });
+
+// Función para manejar el evento 'keydown'
+function handleEnterKey(event) {
+    if (event.key === 'Enter') {
+        insertRow();
+    }
+}
+
+// Añadir el evento a ambos campos usando la misma función
+document.getElementById('cantidad1').addEventListener('keydown', handleEnterKey);
+document.getElementById('cantidad2').addEventListener('keydown', handleEnterKey);

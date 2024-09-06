@@ -1,19 +1,22 @@
 html, body {
     width: 100%;
-    height: 100%;
+    height: 90%;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: larger;
 }
 
 #container {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin: 0 auto;
 }
 
 #form {
@@ -101,16 +104,21 @@ html, body {
 
 .icon-button:hover {
     background-color: hsla(134, 68%, 26%, 100%); /* Color del botón en hover */
-    transform: rotate(10deg);
+    /* transform: rotate(10deg); */
+    transform: scale(1.2);
 }
 
+
+.table-container {
+    max-height: 90vh;
+    overflow: auto;
+}
 
 
 table {
     width: 90%;
     min-width: 600px;
     border-collapse: separate;
-    position: relative;
 }
 
 th, td {
@@ -158,14 +166,17 @@ tbody tr:hover td {
     border-color: #6e8e3d; /* Borde color de la fila resaltada */
 }
 
-@media(width >= 300px) and (width <= 600px){
-    .container{
-        max-width: 90%;
+/* @media(width >= 300px) and (width <= 600px){ */
+@media (min-width: 300px) and (max-width: 600px){
+    #container{
+        /* max-width: 90%; */
+        margin: 0 auto;
         padding: 10px;
+        flex-direction: column;
     }
     table{
         width: 90%;
-        min-width: 380px;
-        font-size: 8px;
+        min-width: 350px;
+        /* font-size: 8px; */
     }
 }
